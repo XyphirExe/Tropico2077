@@ -1,0 +1,10 @@
+{
+  "name": "Impossible",
+  "multiplicator": 150,
+  "endAt": 77,
+  "food": 0,
+  "foodNeeded": 100000,
+  "treasury": 0,
+  "agriculture": 0,
+  "industry": 0
+}

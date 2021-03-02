@@ -1,0 +1,10 @@
+{
+  "name": "JaiMal",
+  "multiplicator": 1.5,
+  "endAt": 40,
+  "food": 700,
+  "foodNeeded": 8,
+  "treasury": 700,
+  "agriculture": 10,
+  "industry": 10
+}

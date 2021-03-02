@@ -1,0 +1,10 @@
+{
+  "name": "Enfantin",
+  "multiplicator": 0.5,
+  "endAt": 15,
+  "food": 5000,
+  "foodNeeded": 2,
+  "treasury": 10000,
+  "agriculture": 25,
+  "industry": 25
+}

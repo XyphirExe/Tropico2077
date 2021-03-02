@@ -1,0 +1,10 @@
+Depuis la soutenance nous avons ajouté :
+	- Rajout de l'insertion des évènements fils d'une réponse (un effet "event d'une réponse en soit) dans une liste FIFO contenant l'ensemble des évènements qui devront s'effectuer en fonction du temps qui s'écoule (en fonction des saisons qui passent)
+	- Rajout de pleins de petits détails
+	- Nous avons fixé plusieurs bugs
+	- L'évènement bilan de fin d'année a été fixé et fonctionne maintenant
+	- Rajout de la possibilité de faire une partie multijoueur
+	- Rajout d'une sauvegarde automatique et intelligente :
+		- Sauvegarde à chaque tour et si nous reprenons la partie le même évènement sera affiché qu'au moment où nous avons quitté le programme
+
+Il est possible que nous ayons oublié d'autres modifications, mais si c'est vraiment le cas c'est qu'elles nétaient que des modifications mineures (souvent à cause de bugs)

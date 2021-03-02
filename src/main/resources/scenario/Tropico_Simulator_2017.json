@@ -1,0 +1,781 @@
+{
+  "scenarioTitle":"Tropico Simulator 2017",
+  "factions":[
+    {
+      "factionName":"CAPITALISTES",
+      "satisfaction":50,
+      "supporter":15
+    },
+    {
+      "factionName":"COMMUNISTES",
+      "satisfaction":50,
+      "supporter":15
+    },
+    {
+      "factionName":"LIBERAUX",
+      "satisfaction":50,
+      "supporter":15
+    },
+    {
+      "factionName":"RELIGIEUX",
+      "satisfaction":50,
+      "supporter":15
+    },
+    {
+      "factionName":"MILITARISTES",
+      "satisfaction":50,
+      "supporter":15
+    },
+    {
+      "factionName":"ECOLOGISTES",
+      "satisfaction":50,
+      "supporter":15
+    },
+    {
+      "factionName":"NATIONALISTES",
+      "satisfaction":50,
+      "supporter":15
+    },
+    {
+      "factionName":"LOYALISTES",
+      "satisfaction":50,
+      "supporter":15
+    }
+  ],
+  "Events":[
+    {
+      "title":"Le culte local souhaite un nouveau temple et vous demande de g\u00e9rer la construction.",
+      "seasons":[
+        "WINTER",
+        "SUMMER",
+        "AUTUMN",
+        "SPRING"
+      ],
+      "answers":[
+        {
+          "name":"Accepter leur requ\u00eate et construire ce temple.",
+          "effects":{
+            "satisfaction":{
+              "RELIGIEUX":10
+            }
+          },
+          "events":[
+            {
+              "title":"Le temple que vous avez d\u00e9cid\u00e9 de construire est fini.",
+              "seasons":[
+                "WINTER",
+                "SUMMER",
+                "AUTUMN",
+                "SPRING"
+              ],
+              "answers":[
+                {
+                  "name":"Le donner aux religieux.",
+                  "effects":{
+                    "satisfaction":{
+                      "RELIGIEUX":10
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                },
+                {
+                  "name":"Ne pas le donner aux religieux et le reconvertir en usine.",
+                  "effects":{
+                    "global":{
+                      "industry":20
+                    },
+                    "satisfaction":{
+                      "RELIGIEUX":-20,
+                      "CAPITALISTES":15
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                }
+              ],
+              "father":true,
+              "son":true,
+              "when":3
+            }
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Lacher les chiens pour les faire fuir.",
+          "effects":{
+            "satisfaction":{
+              "RELIGIEUX":-10
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        }
+      ],
+      "father":true,
+      "son":false,
+      "when":0
+    },
+    {
+      "title":"L'usine de stylos vient de subir un incendie.",
+      "seasons":[
+        "SPRING",
+        "AUTUMN",
+        "WINTER",
+        "SUMMER"
+      ],
+      "answers":[
+        {
+          "name":"Payer les r\u00e9parations.",
+          "effects":{
+            "global":{
+              "treasury":-100
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"L'abandonner et importer des stylos \u00e0 l'avenir.",
+          "effects":{
+            "global":{
+              "industry":-15
+            },
+            "satisfaction":{
+              "NATIONALISTES":-5
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        }
+      ],
+      "father":true,
+      "son":false,
+      "when":0
+    },
+    {
+      "title":"Les agriculteurs viennent se plaindre de faibles r\u00e9coltes.",
+      "seasons":[
+        "AUTUMN",
+        "WINTER"
+      ],
+      "answers":[
+        {
+          "name":"Leur fournir de l'engrais pour de meilleures r\u00e9coltes.",
+          "effects":{
+            "global":{
+              "treasury":-50,
+              "agriculture":30
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        }
+      ,{
+          "name":"Leur dire qu'au moins ils réussiront leur régime.",
+          "effects":{
+            "global":{
+              "agriculture":-10
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        }
+      ],
+      "father":true,
+      "son":false,
+      "when":0
+    },
+    {
+      "title":"C'est votre anniversaire! Le dictateur voisin souhaite vous offrir un cadeau pour f\u00eater \u00e7a.",
+      "seasons":[
+        "WINTER"
+      ],
+      "answers":[
+        {
+          "name":"Accepter son gentil cadeau.",
+          "effects":{
+            "global":{
+              "treasury":500
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Refuser poliment son cadeau.",
+          "effects":{
+
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Refuser son cadeau et lui d\u00e9clarer la guerre.",
+          "effects":{
+            "satisfaction":{
+              "MILITARISTES":20
+            }
+          },
+          "events":[
+            {
+              "title":"La guerre est d\u00e9clar\u00e9e, vous vous appr\u00eatez \u00e0 d\u00e9barquer sur l'\u00eele voisine.",
+              "seasons":[
+                "WINTER",
+                "AUTUMN",
+                "SPRING",
+                "SUMMER"
+              ],
+              "answers":[
+                {
+                  "name":"Mettre l'\u00eele \u00e0 feu et \u00e0 sang et piller leurs ressources.",
+                  "effects":{
+                    "global":{
+                      "treasury":600
+                    },
+                    "satisfaction":{
+                      "MILITARISTES":10
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                },
+                {
+                  "name":"Renoncer et faire la paix car la guerre c'est mal.",
+                  "effects":{
+                    "satisfaction":{
+                      "LIBERAUX":10,
+                      "ECOLOGISTES":15,
+                      "MILITARISTES":-15
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                }
+              ],
+              "father":true,
+              "son":true,
+              "when":1
+            }
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        }
+      ],
+      "father":true,
+      "son":false,
+      "when":0
+    },
+    {
+      "title":"Vous avez une r\u00e9union avec vos conseillers. Quelle d\u00e9cision allez vous donc pouvoir prendre?",
+      "seasons":[
+        "WINTER",
+        "AUTUMN",
+        "SPRING",
+        "SUMMER"
+      ],
+      "answers":[
+        {
+          "name":"Taxer les riches.",
+          "effects":{
+            "global":{
+              "treasury":150
+            },
+            "satisfaction":{
+              "COMMUNISTES":15
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Ouvrir une nouvelle d\u00e9chetterie.",
+          "effects":{
+            "satisfaction":{
+              "ECOLOGISTES":20
+            }
+          },
+          "events":[
+            {
+              "title":"Les employ\u00e9s de la d\u00e9chetterie sont en gr\u00e8ve. Ils souhaitent une augmentation de salaire.",
+              "seasons":[
+                "WINTER",
+                "AUTUMN",
+                "SPRING",
+                "SUMMER"
+              ],
+              "answers":[
+                {
+                  "name":"C\u00e9der \u00e0 leurs demandes.",
+                  "effects":{
+                    "global":{
+                      "treasury":-100
+                    },
+                    "satisfaction":{
+                      "COMMUNISTES":10
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                },
+                {
+                  "name":"Fermer la d\u00e9chetterie et jeter ses d\u00e9chets \u00e0 la mer.",
+                  "effects":{
+                    "global":{
+                      "industry":-10
+                    },
+                    "satisfaction":{
+                      "COMMUNISTES":-20,
+                      "ECOLOGISTES":-20
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                }
+              ],
+              "father":true,
+              "son":true,
+              "when":5
+            }
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Investir dans l'usine de papier toilette.",
+          "effects":{
+            "global":{
+              "industry":10
+            },
+            "satisfaction":{
+              "CAPITALISTES":15
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Plus de frites \u00e0 la cantine.",
+          "effects":{
+            "satisfaction":{
+              "LOYALISTES":5
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Construire de nouvelles usines.",
+          "effects":{
+            "global":{
+              "industry":10
+            },
+            "satisfaction":{
+              "ECOLOGISTES":-15
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Ouvrir de nouvelles plantations.",
+          "effects":{
+            "global":{
+              "agriculture":15
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Faire des essais nucl\u00e9aires.",
+          "effects":{
+            "satisfaction":{
+              "MILITARISTES":10,
+              "ECOLOGISTES":-20
+            }
+          },
+          "events":[
+            {
+              "title":"Vous d\u00e9cidez de faire des essais nucl\u00e9aires sur votre \u00eele. O\u00f9 allez vous donc faire exploser votre bombe?",
+              "seasons":[
+                "WINTER",
+                "AUTUMN",
+                "SPRING",
+                "SUMMER"
+              ],
+              "answers":[
+                {
+                  "name":"Sur le temple.",
+                  "effects":{
+                    "supporter":{
+                      "RELIGIEUX":-5
+                    }
+                  ,"satisfaction":{
+                      "RELIGIEUX":-20
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                },
+                {
+                  "name":"Au dessus de la mer.",
+                  "effects":{
+                    "satisfaction":{
+                      "ECOLOGISTES":-15
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                },
+                {
+                  "name":"Sur l'usine de gobelets.",
+                  "effects":{
+                    "satisfaction":{
+                      "CAPITALISTES":-10,
+                      "COMMUNISTES":-15,
+                      "NATIONALISTES":-5
+                    }
+                  },
+
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                },
+                {
+                  "name":"Sur la base militaire.",
+                  "effects":{
+                    "supporter":{
+                      "MILITARISTES":-5
+                    }
+                  ,"satisfaction":{
+                      "MILITARISTES":-10
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                }
+              ],
+              "father":true,
+              "son":true,
+              "when":1
+            }
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Exporter des ressources.",
+          "effects":{
+            "global":{
+              "treasury":100
+            },
+            "satisfaction":{
+              "CAPITALISTES":10,
+              "LIBERAUX":5
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        }
+      ],
+      "father":true,
+      "son":false,
+      "when":0
+    },
+    {
+      "title":"Le pays voisin est \u00e9merveill\u00e9 par votre production de voitures et souhaite vous en acheter.",
+      "seasons":[
+        "SUMMER",
+        "WINTER",
+        "SPRING",
+        "AUTUMN"
+      ],
+      "answers":[
+        {
+          "name":"Leur en vendre une cargaison.",
+          "effects":{
+            "global":{
+              "treasury":200
+            },
+            "satisfaction":{
+              "LIBERAUX":0,
+              "CAPITALISTES":10
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Ils marcheront.",
+          "effects":{
+            "satisfaction":{
+              "CAPITALISTES":-5,
+              "LIBERAUX":-5
+            }
+          },
+          "events":[
+
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        },
+        {
+          "name":"Leur vendre \u00e0 un prix exorbitant.",
+          "effects":{
+            "global":{
+              "treasury":700
+            }
+          },
+          "events":[
+            {
+              "title":"Le pays \u00e0 qui vous avez vendu vos formidables voitures vient de se rendre compte que vous les avez roul\u00e9s dans la farine. Ils sont donc tr\u00e8s m\u00e9contents et vous d\u00e9clarent la guerre.",
+              "seasons":[
+                "SUMMER",
+                "WINTER",
+                "SPRING",
+                "AUTUMN"
+              ],
+              "answers":[
+                {
+                  "name":"Mettre leur pays \u00e0 feu et \u00e0 sang et piller leurs ressources.",
+                  "effects":{
+                    "global":{
+                      "treasury":600
+                    },
+                    "satisfaction":{
+                      "MILITARISTES":10
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                },
+                {
+                  "name":"Les bombarder et ne plus en entendre parler.",
+                  "effects":{
+                    "satisfaction":{
+                      "MILITARISTES":10
+                    }
+                  },
+                  "events":[
+
+                  ],
+                  "vsevents":[
+
+                  ],
+                  "vseffects":{
+
+                  }
+                }
+              ],
+              "father":true,
+              "son":true,
+              "when":1
+            }
+          ],
+          "vsevents":[
+
+          ],
+          "vseffects":{
+
+          }
+        }
+      ],
+      "father":true,
+      "son":false,
+      "when":0
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Infinite",
+  "multiplicator": 1,
+  "endAt": 0,
+  "food": 100000,
+  "foodNeeded": 0,
+  "treasury": 1000000000,
+  "agriculture": 25,
+  "industry": 25
+}

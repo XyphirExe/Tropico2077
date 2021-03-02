@@ -1,0 +1,232 @@
+@startuml
+
+title __TROPICO's Class Diagram__\n
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Answer {
+        - effects : HashMap<String, HashMap<String, Integer>>
+        - events : ArrayList<Event>
+        - name : String
+        - vseffects : HashMap<String, HashMap<String, Integer>>
+        - vsevents : ArrayList<Event>
+        + Answer()
+        + Answer()
+        + getEffects()
+        + getEvents()
+        + getName()
+        + getVSEffects()
+        + getVSevents()
+        + toString()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Difficulty {
+        - agriculture : int
+        - endAt : int
+        - food : int
+        - foodNeeded : int
+        - industry : int
+        - multiplicator : float
+        - name : String
+        - treasury : int
+        + Difficulty()
+        + getAgriculture()
+        + getEndAt()
+        + getFood()
+        + getFoodNeeded()
+        + getIndustry()
+        + getMultiplicator()
+        + getName()
+        + getTreasury()
+        {static} + loadFromResource()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Event {
+        - answers : ArrayList<Answer>
+        - father : boolean
+        - seasons : List<String>
+        - son : boolean
+        - title : String
+        - when : int
+        + Event()
+        + equals()
+        + getAnswers()
+        + getRandomlyOrderedAnswers()
+        + getTitle()
+        + getWhen()
+        + hasSeason()
+        + hashCode()
+        {static} + main()
+        + toString()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Faction {
+        - factionName : String
+        - satisfaction : int
+        - supporter : int
+        + Faction()
+        + changeSatisfaction()
+        + changeSupporter()
+        + getFactionName()
+        + getSatisfaction()
+        + getSupporter()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Game {
+        ~ actualAnswers : ArrayList<Answer>
+        ~ actualEvent : ArrayList<Event>
+        ~ agriculture : int
+        ~ eventsQueue : LinkedList<ArrayList<Event>>
+        ~ factions : ArrayList<Faction>
+        ~ industry : int
+        ~ loseCondition : int
+        ~ score : int
+        {static} ~ seasons : String[]
+        ~ treasury : int
+        - citizens : int
+        - food : int
+        - gameName : String
+        + Game()
+        + Game()
+        + applyAnswer()
+        + checkFood()
+        + corruption()
+        + getGlobalSatisfaction()
+        + isDown()
+        + market()
+        {static} + restoreGame()
+        + run()
+        + saveGame()
+        + showStats()
+        + toString()
+        + turn()
+        + turn()
+        + turn()
+        ~ endYear()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.GameVS {
+        {static} - actualGame : GameVS
+        - gameSize : int
+        - playersGames : ArrayList<GamePlayer>
+        - toRemove : ArrayList<GamePlayer>
+        - vsName : String
+        + GameVS()
+        + GameVS()
+        {static} + restoreGameVS()
+        + run()
+        + saveGameVS()
+        - allDown()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.GameVS.GamePlayer {
+        - playerName : String
+        + GamePlayer()
+        + applyVSAnswer()
+        + applyVsAnswers()
+        + run()
+        + saveGame()
+        + turn()
+        + turn()
+        - sendEventsAndEffects()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.GlobalScanner {
+        {static} + SYSTEM_IN : GlobalScanner
+        - scanner : Scanner
+        + close()
+        + nextInt()
+        + nextLine()
+        - GlobalScanner()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Main {
+        {static} + getDifficultyFromFolder()
+        {static} + getSaveFromfolder()
+        {static} + getScenarioFromfolder()
+        {static} + main()
+        {static} + skipWin()
+        {static} + skipWin()
+        {static} + skipWin()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Main.Options {
+        - difficultyName : String
+        - scenarioName : String
+        - trueDifficultyName : String
+        - trueScenarioName : String
+        {static} + chooseOptions()
+        - Options()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Scenario {
+        - Events : List<Event>
+        - factions : List<Faction>
+        - scenarioTitle : String
+        + EventNo()
+        + Scenario()
+        + add()
+        + getFactions()
+        + getScenarioTitle()
+        {static} + loadFromResource()
+        {static} + main()
+        + pickRandomEvent()
+        + toString()
+    }
+  }
+  
+
+  namespace fr.uge.tropico {
+    class fr.uge.tropico.Season {
+    }
+  }
+  
+
+  fr.uge.tropico.Game o-- fr.uge.tropico.Difficulty : difficulty
+  fr.uge.tropico.Game o-- fr.uge.tropico.Scenario : scenario
+  fr.uge.tropico.GameVS o-- fr.uge.tropico.GameVS.GamePlayer : actualPlayer
+  fr.uge.tropico.GameVS +-down- fr.uge.tropico.GameVS.GamePlayer
+  fr.uge.tropico.GameVS.GamePlayer -up-|> fr.uge.tropico.Game
+  fr.uge.tropico.GlobalScanner .up.|> java.io.Closeable
+  fr.uge.tropico.Main +-down- fr.uge.tropico.Main.Options
+  fr.uge.tropico.Main.Options o-- fr.uge.tropico.Difficulty : difficulty
+  fr.uge.tropico.Main.Options o-- fr.uge.tropico.Scenario : scenario
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

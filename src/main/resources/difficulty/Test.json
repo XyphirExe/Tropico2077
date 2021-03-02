@@ -1,0 +1,10 @@
+{
+  "name": "test",
+  "multiplicator": 1,
+  "endAt": 10,
+  "food": 1000,
+  "foodNeeded": 16,
+  "treasury": 200,
+  "agriculture": 15,
+  "industry": 15
+}

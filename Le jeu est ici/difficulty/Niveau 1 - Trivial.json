@@ -1,0 +1,10 @@
+{
+  "name": "Trivial",
+  "multiplicator": 0.2,
+  "endAt": 10,
+  "food": 10000,
+  "foodNeeded": 1,
+  "treasury": 20000,
+  "agriculture": 50,
+  "industry": 50
+}
